@@ -47,12 +47,14 @@ const ourTeam = [
 console.log(ourTeam);
 
 const memberListDom = document.getElementById('member_list')
-
-const memberCardDom = document.querySelector('.member_card'); 
+ 
 
 for (let i = 0; i < ourTeam.length;i++) {
     
     const teamElement = ourTeam[i];
+    const memberCard = document.createElement('div')
+    memberCard.classList.add('member_card')
+
     const memberName = document.createElement('div');
     memberName.classList.add('member_name');
     memberName.append(teamElement.name);
@@ -65,12 +67,12 @@ for (let i = 0; i < ourTeam.length;i++) {
     const memberImage = document.createElement('img');
     memberImage.src = `img/${teamElement.image}`;
 
-    memberCardDom.append(memberImage);
-    memberCardDom.append(memberName);
-    memberCardDom.append(memberPosition);
-    memberListDom.append()
+    memberCard.append(memberImage);
+    memberCard.append(memberName);
+    memberCard.append(memberPosition);
+    memberListDom.append(memberCard)
 
-    console.log(memberCardDom)
+    console.log(memberCard)
     
 }
 
