@@ -61,10 +61,11 @@ for (let i = 0; i < ourTeam.length;i++) {
     console.log(memberName);
 
     const memberPosition = document.createElement('div');
-    memberPosition.classList.add('member_Position');
+    memberPosition.classList.add('member_position');
     memberPosition.append(teamElement.position);
 
     const memberImage = document.createElement('img');
+    memberImage.classList.add('member_image')
     memberImage.src = `img/${teamElement.image}`;
 
     memberCard.append(memberImage);
